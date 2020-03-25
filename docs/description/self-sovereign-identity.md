@@ -1,0 +1,9 @@
+# Self Sovereign Identity
+
+**Lorena** provides Self-Sovereign Digital Identity, a method that lets people control how and where their personal information is used while accessing services online. It is based on the W3C Decentralized Identifiers and Verifiable Credentials standards.
+
+Self-Sovereign Digital Identity is built upon public-key cryptography and blockchain technologies, making it possible to independently publish and verify the identity of individuals, organizations, and their devices, without the involvement of a trusted intermediary (traditionally, a certificate authority). This can provide effective resistance to censorship, manipulation of data, and mass surveillance by eliminating the necessity of trusted third parties. The use of a public blockchain is necessary to make distributed identity possible.
+
+Instead of trusting certificate authorities and centralized identity registries to hold the keys, **Self-Sovereign Digital Identity allows users to keep their own private keys and their data private**, and build a set of attestations or proofs about their identity, to which they can control access. They can even avoid sharing the actual data, and instead use zero-knowledge proofs to demonstrate that certain facts about them are true (e.g. proof of age, residency, nationality) **without sharing their personally identifiable information**.
+
+This is a benefit to individuals who are increasingly concerned about their privacy, and to organizations which are held liable for careless treatment of data with huge penalties (especially under the GDPR). It allows for a new world of peer-to-peer issuance and verification of credentials without intermediaries, and for more complex credentials to be built upon combinations of other credentials (e.g. discounts for resident full-time students under 25) without having to share all of the sensitive data with potentially untrustworthy parties.

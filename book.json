@@ -1,0 +1,11 @@
+{
+    "root": "./docs",
+    "title": "Caelum Documentation",
+    "plugins": ["insert-logo"],
+    "pluginsConfig": {
+        "insert-logo": {
+            "url": "/logo.png",
+            "style": "background: none;"
+        }
+    }
+}
