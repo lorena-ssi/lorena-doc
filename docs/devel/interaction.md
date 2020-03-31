@@ -1,6 +1,6 @@
 # Interact with your ID Space
 ### Open Riot or RiotX
-Open the Riot Client (or any of your choice).
+Using the terminal you can intracte with your IDspace and your Wallet
 
 Setup your matrix federation server. Our test server is : https://matrix.caelumlabs.com (just for testing, it will delete all it's accounts every few days). Login with your user and password (created in the Setup). You are ready to interact, just write help
 

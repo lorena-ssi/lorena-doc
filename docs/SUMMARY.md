@@ -12,6 +12,8 @@
 ### GETTING STARTED
 
 * [Setup Lorena](devel/setup.md)
+* [Lorena SDK](devel/sdk.md)
+* [Identity Wallet](devel/wallet.md)
 * [Interact with your IDSpace](devel/interaction.md)
 * [What can I do now](devel/next.md)
 

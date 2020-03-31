@@ -1,36 +1,45 @@
 # Setup Lorena
-### What do you need to have a ID Space up.
 
-## Setup
-First you need to install IPFS (Installation) or you can use a public IPFS node
+IDspace : Identity Container allowing Recipes to be automated and Executed.
 
-You can also install your own Substrate Node or use a Public One.
-
-```bash
-$ ipfs daemon &
-$ export SERVER_MATRIX=https://matrix.caelumlabs.com
-$ export SERVER_SUBSTRATE=wss://substrate-demo.caelumlabs.com/
-$ export PDS_PASSWORD=secret_pass
-```
+LorenaCLI : Identity Container in the Browser, Mobile App or as an external node App. Uses Local Storage or Local Filesystem.
 
 Substrate is the only Blockchain supported but we are working to integrate more in the near future.
 
-Ready to init your first IDSpace. We are using the organization name caelum, but you can choose your own. This will setup your keys, matrix user and blockchain connection.
+### What do you need to have a ID Space up.
 
+We already have a few IDspaces for test running. If You want onw you just need to ask for one. We will add you as admin for it.
+
+You can ask for one Idspace in [our Matrix Channel](https://matrix.to/#/!euLDblFPfxcoBjSRBM:matrix.org?via=matrix.org)
+
+## Setup
+
+To interact with your IDspace, we will send you a Connection String and a PIN.
+
+1. Ask for an Idspace at our Matrix Channel We will create one for each organization.
+2. We will sendd you instructions on how to connect (connection string & PIN)
+3. Install the CLI.
+4. Set a username & pasword.
+5. Connect for the first time using the Connection String and the PIN.
+6. Now you have your onw LorenaCLI running and you can talk to you IDSpace.
+
+You can use the terminal to play with your IDspace. Install it from : 
 ```bash
-$ ./idspace init caelum
+$ git clone https://github.com/lorena-ssi/lorena-cli
+$ ./terminal
+> username : yourname
+> password : yourpass
+> connstring : connstring (sent to you)
+> PIN : PIN (sent to you)
 ```
 
-Check your DID document has been created to IPFS : https://ipfs.io/ipfs/<ipfsHash>
+The connection string has encrypted instructions on how to connect to your IDspace. Including the DID, matrix User of your DID, and specific Blockchain being used.
 
-Now you can add a client to your ID Space.
-
-```bash
-$ ./idspace add_client caelum caelum-cli
-```
-
-Now you have new matrix user connected as a client to your ID Space. You can now send commands to it. Start the ID Space:
+Now you are connected to the terminal. You can test it
 
 ```bash
-$ ./idspace caelum
+#lorena: help
+#lorena: ping
 ```
+
+The terminal itself is an example on how to use the Lorena CLI (SDK)

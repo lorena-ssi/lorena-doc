@@ -14,8 +14,8 @@ DID document with all the details on the recipe
 ```json
 {
     "@context": "@",
-    "id": "did:lor:lab:1233",
-    "author": "did:lor:lab:3456",
+    "id": "did:lor:lab1:1233",
+    "author": "did:lor:lab1:3456",
     "services": {
         "ping" : {
 
