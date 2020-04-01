@@ -1,5 +1,5 @@
 # Product Overview
-### Self Sovereign Identity Middleware
+## Self Sovereign Identity Middleware
 
 By using Blockchain and other compatible decentralized techs we will allow public administrations, non-profit associations, private companies and individuals to securely create, deliver and manage verifiable credentials while reducing bureaucracy and increasing security. Our solution is a P2P middleware, that allows secure and verified data communication in distributed applications.
 
