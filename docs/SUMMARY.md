@@ -19,6 +19,7 @@
 * [Recipes](description/recipes.md)
 
 
+<<<<<<< HEAD
 
 ## Implementing on Substrate
 
@@ -68,6 +69,13 @@
             * [Search](blockchain/substrate/recipes.md#search)
     * [Lorena SDK](blockchain/substrate/recipes.md#lorena-SDK)
         * [Lorena CLI Lib](blockchain/substrate/recipes.md#lorena-CLI-Lib)
+=======
+* [Setup Lorena](devel/setup.md)
+* [Lorena SDK](devel/sdk.md)
+* [Identity Wallet](devel/wallet.md)
+* [Interact with your IDSpace](devel/interaction.md)
+* [What can I do now](devel/next.md)
+>>>>>>> 00f5ebff289b04464ac45d709de9c6bcadb71ed2
 
 ----
 
