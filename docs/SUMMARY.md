@@ -34,6 +34,7 @@
     * [Check](blockchain/substrate/credential-lifecycle.md#check)
     * [Revoke](blockchain/substrate/credential-lifecycle.md#revoke)
 ----
+<!-- 
 * [IDSpace - Containers](blockchain/substrate/IDSpace.md)
     * [Configuration](blockchain/substrate/IDSpace.md#configuration)
     * [Create IDSpace](blockchain/substrate/IDSpace.md#create-IDSpace)
@@ -48,6 +49,7 @@
             * [Send information](blockchain/substrate/IDSpace.md#send-information)
             * [Send documents](blockchain/substrate/IDSpace.md#send-documents)
 ----
+-->
 * [Recipes](blockchain/substrate/recipes.md)
     * [Recipes Lifecycle](blockchain/substrate/recipes.md#recipes-lifecycle)
         * [Create](blockchain/substrate/recipes.md#create)
