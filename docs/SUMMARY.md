@@ -6,10 +6,6 @@
 
 * [Requirements](description/requirements.md)
 
-## Getting started
-
-* [Installation](description/installation.md)
-
 ## Protocol overview
 
 * [Architecture](description/architecture.md)
@@ -72,7 +68,9 @@
 * [Privacy and selective credentials](blockchain/substrate/privacy.md)
     * [Zenroom Lib](blockchain/substrate/privacy.md#zenroom-lib)
 ----
-## Tutorials
-* [Play your first Lorena ping-pong](tutorials/first.md)
-* [2](tutorials/second.md)
-* [3](tutorials/third.md)
+## Getting started
+
+* [Installation](tutorials/installation.md)
+* [Set Up Lorena CLI](tutorials/lorena-cli.md)
+* [Set Up Lorena WebApp](tutorials/lorena-webapp.md)
+* [Create your first Recipe](tutorials/create-recipes.md)

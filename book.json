@@ -4,7 +4,7 @@
     "plugins": ["insert-logo"],
     "pluginsConfig": {
         "insert-logo": { 
-            "url": "https://lorena.app.test.caelumlabs.com/img/lorena-logo.30ac7eda.png",
+            "url": "/images/lorena.png",
             "style": "background: none; width: 100%"
         }
     }
