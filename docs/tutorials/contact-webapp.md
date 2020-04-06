@@ -24,5 +24,5 @@ If you have a user role, you can:
 
 If you have an admin role, you can do all user actions and:
 - invite other users
-- issing a credential to users
+- issuing a credential to users
 - verify credentials
