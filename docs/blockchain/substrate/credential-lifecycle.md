@@ -3,6 +3,68 @@ A credential is a set of one or more claims made by the same entity. Credentials
 
 Examples of verifiable credentials include digital employee identification cards, digital birth certificates, and digital educational certificates. 
 
+### Lorena Credentials
+
+We have defined three type of credentials:
+
+#### Verifiable Credential
+
+```json
+{
+    "@context": [ "https://www.w3.org/2018/credentials/v1" ],
+    "type": ["VerifiableCredential"],
+    "issuer": "",
+    "issuanceDate": "",
+    "credentialSubject": "",
+    "proof": {
+        "type" : "Curve448-Goldilocks",
+        "proofPurpose":"assertionMethod",
+        "verificationMethod": "",
+        "signature": ""
+    }
+}
+```
+
+#### Organization Role
+
+```json
+{
+    "@type": "OrganizationRole",
+    "roleName": "",
+    "member": {
+        "@type": "Person",
+        "id": "",
+        "givenName": "",
+        "familyName" : "",
+        "additionalName" : "",
+        "identifier": {
+            "@type":"PropertyValue",
+            "propertyID": "",
+            "value":  ""
+        }
+    }
+}
+```
+
+#### Create Action
+
+```json
+{
+    "@type": "CreateAction",
+    "id": "",
+    "name": "",
+    "description": "",
+    "agent": {
+        "@type": "Person",
+        "id": ""
+    },
+    "location": {
+        "@type": "Residence",
+        "name": ""
+    },
+    "potentialAction": ""
+}
+```
 
 ## Credentials types
 
@@ -52,6 +114,10 @@ Anyone can verify proofs using as input:
 The flow described above is pretty simple, but the steps to setup the credential are a bit more complex:
 ![Zenroom Proofs](../../images/zenroom-proofs.png)
 
+
+
+
+<!-- 
 ## Issue
 
 ## Create
@@ -62,3 +128,4 @@ The flow described above is pretty simple, but the steps to setup the credential
 
 ## Revoke
 
+-->

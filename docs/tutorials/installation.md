@@ -11,13 +11,13 @@ If you get invite, you will receive two codes: Connection String and PIN number.
 Download https://github.com/lorena-ssi/lorena-cli:
 ```bash
 $ git clone https://github.com/lorena-ssi/lorena-cli
+$ cd lorena-cli
 $ npm install
 ```
 
 #### 3. Running Lorena CLI
 Execute CLI
 ```bash
-$ cd lorena-cli
 $ ./terminal addadmin
 ```
 
