@@ -13,6 +13,7 @@
 * [Decentralized Identifiers](2_overview/dids.md)
 * [Verifiable Credentials](2_overview/credentials.md)
 * [IDSpaces](2_overview/idspaces.md)
+* [IDHubs](2_overview/idhubs.md)
 * [Recipes](2_overview/recipes.md)
 
 ## 3. Getting started

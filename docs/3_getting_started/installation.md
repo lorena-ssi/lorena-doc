@@ -1,44 +1,100 @@
 # Installation
 
-Lorena is a peer-to-peer security and private identity middleware. Following the installation guide you will be available to start coding [recipes](2_overview/recipes.md), connecting with other Lorena identities and taht's just the beginning!
+Lorena is a secure and private peer-to-peer identity middleware. Following the installation guide you will be available to start coding [recipes](../2_overview/recipes.md), connecting with other Lorena identities and that's just the beginning!
 
 Let's start with our first Lorena ID:
 ## 1. Get an invite!
-Currently, we have a by-invitation only environment with a maximum of 100 identities. First thing you have to do is to ask us for an invitation to [this Riot room](https://riot.im/app/#/room/!euLDblFPfxcoBjSRBM:matrix.org?via=matrix.org), ask for @alex or @diego and tell us why you want to try Lorena. When you get invite, wew will setup an idspace for you and we will add you as admin for that IDSpace. You will receive two codes: **Connection String** and **PIN number**. You will use them later ;)
+Currently, we have a by-invitation only environment. First thing you have to do is to ask us for an invitation to [this Riot room](https://riot.im/app/#/room/!euLDblFPfxcoBjSRBM:matrix.org?via=matrix.org), ask for @alex or @diego and tell us why do you want to test Lorena for. We will setup an [IDSpace](../2_overview/idspaces.md) for you and we will add you as admin for that IDSpace and send you via PM :
+- The new IDSpace DID
+- The matrix User for that DID
+- a secretCode to connect with your IDSpace
 
-## 2. Install Lorena CLI
-Download https://github.com/lorena-ssi/lorena-cli:
+You will use it later ;)
+
+## 2. Install Lorena SDK and Terminal
+Download https://github.com/lorena-ssi/terminal:
 ```bash
-$ git clone https://github.com/lorena-ssi/lorena-cli
-$ cd lorena-cli
+$ git clone https://github.com/lorena-ssi/terminal
+$ cd terminal
 $ npm install
 ```
 
-## 3. Running Lorena CLI
 To improve your experience using Lorena CLI we coded a terminal App that should be of use to learn on who to use the SDK.
 
-The first time you run it will prompt you to create a new user and password. Also will ask you to fill the connection string and pin code you got in step 1:
+The terminal is an example on how to use Lorena SDK. It will help you understanding the basics of Lorena and how to interact with tour IDSpace.
+
+## 3. Running Lorena CLI
+The first time you run it will prompt you to create a new Wallet. 
 
 Execute CLI
 ```bash
 $ ./terminal
-Username :_username_
-Password :_password_
-Connecting...Creating new connection
-Connection String :_connstring_
-PIN :_pincode_
+Lorena Client
+
+Username :<username>
+Password :<pass>
+A Wallet for username Does not exist
+Create One (Y/n)
 ```
 
-The user and password are used to securely store all of your information locally. Your new wallet can be used in your FS (|~/.lorena/wallets/user) or in LocalStorage if you are working with the SDK from the Browser.
+**What happened so far** : The user and password are used to securely store all of your information locally. Your new wallet can be STORED in your FS (|~/.lorena/wallets/user) or in LocalStorage if you are working with the SDK from the Browser.
 
-We recommend sending the connstring and the security code to new users using different channels.
+Now you can fill in your data. Remember your profile details will be stored locally and never sent anywhere else without your explicit consent.
 
-What happened so far:
-1. We installed an idspace in the cloud for you with a new DID, Zenroom Keypair and Matrix user (to interact With). We also registered your new public Key to the Blockchain.
-2. We registered a new DID for the admin of the IDSpace, then zipped instructions on how to connect to the IDSpace (connstring). The ones you just used.
-3. When launching the terminal for the first time, you are opening a channel with your IDSpace (a room in Matrix).
-4. You are  sending your PublicKey to the IDSpace and receiveng a new DID (registered to the Blockchain with your new DID)
-5. A New credential is iisued by the IDSpace, appointing you as amdin.
+```bash
+Key Pair + DID Added
+First Name :John
+Last Name (1) :Smith
+Last Name (2) :Sikaris
+DNI :1111111A
+Phone number :55566744
+Email :john@test.com
+City/Town :Barcelona
+Postal Code :08001
+Neighborhood :El Born
+Save Storage
+```
+
+**What happened so far** : Your wallet is ready with :
+- A new DID (Not yet stored on the BLockchain)
+- A new Keypair (zenroom keys) for you
+- A new matrix user (for P2P communications)
+- A first self-signed certificate with your own personal information.
+
+So now you just set up your first Identity Wallet and you are ready playing with it.
+Try to get information using these commands:
+```bash
+lorena# help
+actions : [ list of actions ]
+lorena# did
+DID : did:lor:labtest:<DID>
+lorena# pubkey
+Public Key : <public Key>
+lorena# info
+{
+  matrixUser: <matrixUser>,
+  matrixPass: <matrixPass>,
+  did: 'did:lor:labtest:<DID>',
+  keyPair: {'did:lor:labtest:<DID>': { keypair: [Object] }},
+  blockchainServer: 'wss://labtest.substrate.lorena.tech',
+  matrixFederation: 'labtest.matrix.lorena.tech',
+  matrixServer: 'https://labtest.matrix.lorena.tech'
+}
+```
+
+Or even get your signed credential
+```bash
+lorena# credential
+{
+  <Yuur full self-signed Credential>
+}
+```
+
+As you can see you are not connected to the IDSpace. Try to run rooms (your connections). It's empty. Let's connect to our own IDSpace
+
+# Connecting ro the IDSpace
+
+
 
 ## 3. Using the SDK
 
