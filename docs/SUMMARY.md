@@ -33,7 +33,7 @@
         * [Standards W3C](4_credentials/credential-lifecycle.md#standards-W3C)
         * [Zenroom Proofs](4_credentials/credential-lifecycle.md#zenroom-proofs)
 
-## 5. Working woth Blockchain
+## 5. Working with Blockchain
 
 * Using [Substrate](5_blockchain/substrate.md)
 * Add another Blockchain [Blockchain](5_blockchain/add.md)
