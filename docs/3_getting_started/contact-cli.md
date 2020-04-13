@@ -2,110 +2,51 @@
 
 ! Remember you should finished [installation](installation.md) to continue with tutorial, you need a _connection string_ and _PIN code_ to continue:
 
-
-
-
-Now, with your CLI running like this:
+Now, with your terminal running like this:
 
 You can start playing a bit, lets check all commands you can try. Remember, all that commands are recipes and you can create yours in this [installation](create-recipes.md).
 
-Now, you can check what is your contact list:
+Let's add your first contact. We will connect with the IDSpace we just created for you. You already have the DID, matrixUser and secretCode, now you will use them.
+
+## Connect with your IDspace
 
 ```bash
-lorena# contact-list
-contact-list...done - 1 results
-{
-  invited: [],
-  verified: [
-    {
-      id: 2,
-      did: 'ZDE5RlNHNUtVMDFIWlVKek1tTk1hMUV3',
-      didMethod: 'labtest',
-      createdAt: '2020-04-06 08:29:46',
-      joinAt: '2020-04-06 08:32:10',
-      status: 'verified',
-      type: 'contact',
-      name: 'diego',
-      alias: 'diego',
-      fullName: 'diego dddd sddsds',
-      nationalId: '23234324'
-    }
-  ]
-}
+lorena# room-add
+DID : <IDSpace DID>
+matrix : <IDSpace matrixUser>
+Successfull
+Contact invitation Accepted from ztbjrel4b1lh:labtest.matrix.lorena.tech 
 ```
-In your contact-list appears yourself.
 
-To invite someone else, execute the command _contact-invite_ and you will get the connectrion-string and the PIN code:
-
+You added this new room to your list of rooms (stored encrypted in your wallet)
+When you quit the terminal it will ask to save all the changes to your Wallet.
 
 ```bash
-lorena# contact-invite
-First Name : MyFriend
-Last Name 1: Stark
-Last Name 2: Sanders
-DNI : 23432423K
-contact-invite...done - 1 results
-{
-  connString: 'hvhZBffXu4FaS6yZR6TMlQ-!-NDM2ZjZlNmU2NTYzNzQ2OTZmNmUyMDUzNzQ3MjY5NmU2Nw-!-qEoDQ7n4taLJacN2pjjGMOxM-EWg8Rq_UAuNA-e-Iv4-!-AuF3qG3wI0Keg2xh7qS8vu4HeCX5H24M_qCpq18snf9Snqhq2YlSDSCsw3PJF4D8lHVBN7RnyC0NX6Aqo64tjy2uBhUebRXG69l3hOuUDI0WUM6-3G8rBfrsf3NQF-HOJ8Q1gURJEgCtGh-cDIfNpYqkkWj6ZLa9l_K2y6BrxK6DvKToHWsAB41g1rylesFi9SXtgW3V6_sAlU450xGCPZs4DzBjA6u8yt9n6--dyo_w6EM-ocU6r1q-W9a238LQP6k7G-1ZmThujA0E__OsmxKp_pxpXHUWbt_ZQBwEWlaWWsVmMRRXcLau5qYYnqeWezhzpUy2MvIybljpTegFxA',
-  pin: '361472'
-}
-
+lorena# rooms
+[ Your rooms]
+lorena# ping
+RoomID : <roomID>
+ping...done - 1 results
+pong
 ```
 
-Then, with another bash terminal, you can access to your _MyFriend_:
-
-![Invite](../images/cli-invite.png)
-
-Left side is my first Lorena ID (diego), and the right one is accessing my second I've just invited (MyFriend).
-
-Now, if you want to see who is your contact, you can check _myfriend_ is:
+You can see your new roomID (the identifier of the room), and the details for that room. Now you can also do a ping. It's time to ask to become a member of the organization. And reclaim your role as admin.
 
 ```bash
-lorena# contact-list
-contact-list...done - 1 results
-{
-  invited: [],
-  verified: [
-    {
-      id: 2,
-      did: 'ZDE5RlNHNUtVMDFIWlVKek1tTk1hMUV3',
-      didMethod: 'labtest',
-      createdAt: '2020-04-06 08:29:46',
-      joinAt: '2020-04-06 08:32:10',
-      status: 'verified',
-      type: 'contact',
-      name: 'diego',
-      alias: 'diego',
-      fullName: 'diego dddd sddsds',
-      nationalId: '23234324'
-    },
-    {
-      id: 3,
-      did: 'ZVVWMFIyZDJPRFUzY0ZkMFNtRldPV05p',
-      didMethod: 'labtest',
-      createdAt: '2020-04-06 08:45:46',
-      joinAt: '2020-04-06 08:49:45',
-      status: 'verified',
-      type: 'contact',
-      name: 'myfriend',
-      alias: 'myfriend',
-      fullName: 'MyFriend Stark Sanders',
-      nationalId: '23432423K'
-    }
-  ]
-}
+lorena# member-of
+roomID: <IDSpace roomID>
+extra: <extra information>
+roleName : <admin/>developer/...>
 ```
 
-In addition, you can check de public key of your contact and validate you are connected:
+The IDSpace will verify the self-signature to make sure you own your public key and the signature is Ok.
+
+Also a challenge will be done to the DID of the IDSpace to verify other's side keys. key signature verification is done in both sides.
 
 ```bash
-lorena# contact-info
-DID : ZVVWMFIyZDJPRFUzY0ZkMFNtRldPV05p
-contact-info...done - 1 results
-{
-  did: 'ZVVWMFIyZDJPRFUzY0ZkMFNtRldPV05p',
-  pubKey: 'BHRygkvfZKNbh5-t-vu8y1ioxaK1viWzszGWeULjuwc5xwZh28wLlOVc0-VH1Y15X5D5av2w-vkBOoBTm3f9MhVzT7EG06ICrcBeGhyhRRt76gUnUN-Xc1E5leUpAXxshF9d6LvGrhIT628nRYSsFO0',
-  connected: true
-}
+lorena# member-of-confirm
+roomID: <IDSpace roomID>
+secretCode: <secretCode>
 ```
 
+If you use the secretCode generated for the first time. You will get admin role (roleName is ignired) and that code won't ever be available.
