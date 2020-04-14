@@ -14,8 +14,8 @@ Let's add your first contact. We will connect with the IDSpace we just created f
 lorena# room-add
 DID : <IDSpace DID>
 matrix : <IDSpace matrixUser>
-Successfull
-Contact invitation Accepted from ztbjrel4b1lh:labtest.matrix.lorena.tech 
+Successful
+Contact invitation Accepted from ztbjrel4b1lh:labtest.matrix.lorena.tech
 ```
 
 You added this new room to your list of rooms (stored encrypted in your wallet)
@@ -49,4 +49,4 @@ roomID: <IDSpace roomID>
 secretCode: <secretCode>
 ```
 
-If you use the secretCode generated for the first time. You will get admin role (roleName is ignired) and that code won't ever be available.
+If you use the secretCode generated for the first time. You will get admin role (roleName is ignored) and that code won't ever be available.

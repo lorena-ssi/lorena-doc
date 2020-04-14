@@ -86,13 +86,13 @@ Or even get your signed credential
 ```bash
 lorena# credential
 {
-  <Yuur full self-signed Credential>
+  <Your full self-signed Credential>
 }
 ```
 
 As you can see you are not connected to the IDSpace. Try to run rooms (your connections). It's empty. Let's connect to our own IDSpace
 
-# Connecting ro the IDSpace
+# Connecting to the IDSpace
 
 
 

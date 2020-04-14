@@ -9,7 +9,7 @@ const lorena = new Lorena(wallet, { debug: true })
 ```
 
 First time user (no Wallet). Open a connection with the organization that created the Identity.
-It's the organizaation who connects to the Blockchain, registers the DID and links it to your public Key.
+It's the organization which connects to the Blockchain, registers the DID and links it to your public Key.
 
 ```javascript
 let threadId = 0
@@ -50,7 +50,7 @@ You can listen to all of the messages being sent to your Indenity
 
   lorena.on('ready', async () => {
     console.log('connected')
-    
+
     // You application starts here.
   })
 
