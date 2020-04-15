@@ -2,7 +2,7 @@
 
 IDspace : Identity Container allowing Recipes to be automated and Executed.
 
-LorenaCLI : Identity Container in the Browser, Mobile App or as an external node App. Uses Local Storage or Local Filesystem.
+Lorena SDK : Identity Container in the Browser, Mobile App or as an external node App. Uses Local Storage or Local Filesystem.
 
 Substrate is the only Blockchain supported but we are working to integrate more in the near future.
 
@@ -18,14 +18,14 @@ To interact with your IDspace, we will send you a Connection String and a PIN.
 
 1. Ask for an IDspace at our Matrix Channel We will create one for each organization.
 2. We will send you instructions on how to connect (connection string & PIN)
-3. Install the CLI.
+3. Install the Terminal.
 4. Set a username & password.
 5. Connect for the first time using the Connection String and the PIN.
-6. Now you have your onw LorenaCLI running and you can talk to you IDSpace.
+6. Now you can talk to your IDSpace.
 
 You can use the terminal to play with your IDspace. Install it from :
 ```bash
-$ git clone https://github.com/lorena-ssi/lorena-cli
+$ git clone https://github.com/lorena-ssi/terminal
 $ ./terminal
 > username : yourname
 > password : yourpass
@@ -42,4 +42,4 @@ Now you are connected to the terminal. You can test it
 #lorena: ping
 ```
 
-The terminal itself is an example on how to use the Lorena CLI (SDK)
+The terminal itself is an example on how to use the Lorena SDK

@@ -42,7 +42,7 @@ await lorena.connect()
 ```
 
 # Interacting with Lorena P2P Identity Space.
-You can listen to all of the messages being sent to your Indenity
+You can listen to all of the messages being sent to your Identity
 ```javascript
   lorena.on('error', (e) => {
     console.log(e)

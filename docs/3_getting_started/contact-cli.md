@@ -1,4 +1,4 @@
-# Your first contact using Lorena CLI
+# Your first contact using Lorena Terminal
 
 ! Remember you should finished [installation](installation.md) to continue with tutorial, you need a _connection string_ and _PIN code_ to continue:
 

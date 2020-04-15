@@ -24,4 +24,4 @@ Alice stores the credential on her own Database in the IDSpace
 #### Storage
 #### Search
 ## Lorena SDK
-### Lorena CLI Lib
+## Lorena Terminal

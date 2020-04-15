@@ -19,14 +19,14 @@ $ cd terminal
 $ npm install
 ```
 
-To improve your experience using Lorena CLI we coded a terminal App that should be of use to learn on who to use the SDK.
+To improve your experience using Lorena we built a terminal App that should be of use to learn on who to use the SDK.
 
 The terminal is an example on how to use Lorena SDK. It will help you understanding the basics of Lorena and how to interact with tour IDSpace.
 
-## 3. Running Lorena CLI
-The first time you run it will prompt you to create a new Wallet. 
+## 3. Running Lorena Terminal
+The first time you run it will prompt you to create a new Wallet.
 
-Execute CLI
+Execute Terminal
 ```bash
 $ ./terminal
 Lorena Client
@@ -99,7 +99,7 @@ As you can see you are not connected to the IDSpace. Try to run rooms (your conn
 ## 3. Using the SDK
 
 ```javascript
-const Lorena = require('@lorena-ssi/lorena-cli').default
+const Lorena = require('@lorena-ssi/lorena-sdk').default
 const Wallet = require('@lorena-ssi/wallet-lib').default
 
 // Open your wallet and link it to Lorena.
@@ -142,7 +142,7 @@ Your app is now ready to use Lorena!
 ```javascript
 ```
 ## 4. Play with it!
-When the process finishes, you will promtp in Lorena CLI. Try help to see the functions available:
+When the process finishes, you will prompt in Lorena Terminal. Try help to see the functions available:
 
 First try to interact with your Wallet:
 ```bash
