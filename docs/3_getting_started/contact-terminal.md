@@ -43,13 +43,19 @@ There are two ways to claim a role of admin in an organization:
 
 ### IDspace init secret code
 
-If you use the `secretCode` generated when the IDspace is created (`./IDspace init`). You will get admin role (`roleName` is ignored) and that code won't be usable again.
+If you use the `secretCode` generated when the IDspace is created (`./IDspace init`). This is useful only once: that code won't be usable again.
 
 ```bash
 lorena# member-of
 roomID: <IDspace roomID>
 extra: <secretCode>
 roleName : admin
+```
+
+```bash
+lorena# member-of-confirm
+roomID: <IDspace roomID>
+secretCode: <secretCode>
 ```
 
 ### New admin request
