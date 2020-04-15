@@ -4,10 +4,10 @@ Lorena is a secure and private peer-to-peer identity middleware. Following the i
 
 Let's start with our first Lorena ID:
 ## 1. Get an invite!
-Currently, we have a by-invitation only environment. First thing you have to do is to ask us for an invitation to [this Riot room](https://riot.im/app/#/room/!euLDblFPfxcoBjSRBM:matrix.org?via=matrix.org), ask for @alex or @diego and tell us why do you want to test Lorena for. We will setup an [IDSpace](../2_overview/idspaces.md) for you and we will add you as admin for that IDSpace and send you via PM :
-- The new IDSpace DID
+Currently, we have a by-invitation only environment. First thing you have to do is to ask us for an invitation to [this Riot room](https://riot.im/app/#/room/!euLDblFPfxcoBjSRBM:matrix.org?via=matrix.org), ask for @alex or @diego and tell us why do you want to test Lorena for. We will setup an [IDspace](../2_overview/idspaces.md) for you and we will add you as admin for that IDspace and send you via PM :
+- The new IDspace DID
 - The matrix User for that DID
-- a secretCode to connect with your IDSpace
+- a secretCode to connect with your IDspace
 
 You will use it later ;)
 
@@ -21,7 +21,7 @@ $ npm install
 
 To improve your experience using Lorena we built a terminal App that should be of use to learn on who to use the SDK.
 
-The terminal is an example on how to use Lorena SDK. It will help you understanding the basics of Lorena and how to interact with tour IDSpace.
+The terminal is an example on how to use Lorena SDK. It will help you understanding the basics of Lorena and how to interact with tour IDspace.
 
 ## 3. Running Lorena Terminal
 The first time you run it will prompt you to create a new Wallet.
@@ -90,9 +90,9 @@ lorena# credential
 }
 ```
 
-As you can see you are not connected to the IDSpace. Try to run rooms (your connections). It's empty. Let's connect to our own IDSpace
+As you can see you are not connected to the IDspace. Try to run rooms (your connections). It's empty. Let's connect to our own IDspace
 
-# Connecting to the IDSpace
+# Connecting to the IDspace
 
 
 
@@ -111,7 +111,7 @@ const lorena = new Lorena(wallet, { debug: true, silent: true })
 const conf = await lorena.unlock(password)
 if (conf === false) {
   // No Wallet - First time.
-  // Here you need to specify the connstring and security code you already received
+  // Here you need to specify the connection string and security code you already received
   await lorena.newClient(connString, pin, username)
   // Connect
     await lorena.connect()
@@ -133,7 +133,7 @@ Step by Step:
 1. Create a new Wallet (where you keep your info)
 2. Create a Lorena instance and link it to your wallet
 3. First time
-  - use the connstring and the pin to open a channel with your IDspace
+  - use the connection string and the pin to open a channel with your IDspace
   - Connect and do the handshake
   - Lock (save) your new wallet
 4. Not the first time : just connect

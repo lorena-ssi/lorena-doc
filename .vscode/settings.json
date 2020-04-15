@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "Codebases",
     "DIDs",
     "Dspace",
     "Dspaces",
@@ -8,6 +9,7 @@
     "Keypairs",
     "Lifecycle",
     "Polkadot",
+    "Sikaris",
     "Trezor",
     "bootnodes",
     "caelumlabs",
@@ -15,10 +17,14 @@
     "idhubs",
     "idspaces",
     "interoperate",
+    "johnsmith",
     "labtest",
     "opensource",
     "posix",
+    "pubkey",
     "struct",
+    "subkey",
+    "systemctl",
     "techstack",
     "whoami",
     "zenroom"

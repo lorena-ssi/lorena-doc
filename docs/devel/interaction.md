@@ -12,7 +12,7 @@ info
 Your information
 ​
 ping
-Ping your IDSpace
+Ping your IDspace
 ​
 hello
 Hello World example

@@ -21,7 +21,7 @@ To interact with your IDspace, we will send you a Connection String and a PIN.
 3. Install the Terminal.
 4. Set a username & password.
 5. Connect for the first time using the Connection String and the PIN.
-6. Now you can talk to your IDSpace.
+6. Now you can talk to your IDspace.
 
 You can use the terminal to play with your IDspace. Install it from :
 ```bash
@@ -29,7 +29,7 @@ $ git clone https://github.com/lorena-ssi/terminal
 $ ./terminal
 > username : yourname
 > password : yourpass
-> connstring : connstring (sent to you)
+> connString : connection string (sent to you)
 > PIN : PIN (sent to you)
 ```
 

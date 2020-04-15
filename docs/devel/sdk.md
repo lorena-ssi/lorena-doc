@@ -16,7 +16,7 @@ let threadId = 0
 const wallet = new Wallet(username)
 const lorena = new Lorena(wallet, { debug: true })
 
-// Add new Client (connstring and pin).
+// Add new Client (connection string and pin).
 await lorena.newClient(connString, pin, username)
 
 // Connect

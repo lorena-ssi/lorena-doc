@@ -6,14 +6,17 @@ Now, with your terminal running like this:
 
 You can start playing a bit, lets check all commands you can try. Remember, all that commands are recipes and you can create yours in this [installation](create-recipes.md).
 
-Let's add your first contact. We will connect with the IDSpace we just created for you. You already have the DID, matrixUser and secretCode, now you will use them.
+Let's add your first contact. We will connect with the IDspace we just created for you. You already have the DID, matrixUser and secretCode, now you will use them.
 
 ## Connect with your IDspace
 
+### Create a room
+
 ```bash
 lorena# room-add
-DID : <IDSpace DID>
-matrix : <IDSpace matrixUser>
+DID : <IDspace DID>
+matrix : <IDspace matrixUser>
+Created room: !tkdjQmQMgYCjznnfgW:labtest.matrix.lorena.tech
 Successful
 Contact invitation Accepted from ztbjrel4b1lh:labtest.matrix.lorena.tech
 ```
@@ -27,26 +30,52 @@ lorena# rooms
 lorena# ping
 RoomID : <roomID>
 ping...done - 1 results
-pong
+pong @slvlnetgenrq:labtest.matrix.lorena.tech
 ```
 
-You can see your new roomID (the identifier of the room), and the details for that room. Now you can also do a ping. It's time to ask to become a member of the organization. And reclaim your role as admin.
+You can see your new roomID (the identifier of the room), and the details for that room. Now you can also do a ping. It's time to ask to become a member of the organization and claim your role as admin.
+
+## Claiming Admin role
+
+The IDspace will verify the self-signature to make sure you own your public key and the signature is OK. Also a challenge will be done to the DID of the IDspace to verify other's side keys. key signature verification is done in both sides.
+
+There are two ways to claim a role of admin in an organization:
+
+### IDspace init secret code
+
+If you use the `secretCode` generated when the IDspace is created (`./IDspace init`). You will get admin role (`roleName` is ignored) and that code won't be usable again.
 
 ```bash
 lorena# member-of
-roomID: <IDSpace roomID>
-extra: <extra information>
-roleName : <admin/>developer/...>
+roomID: <IDspace roomID>
+extra: <secretCode>
+roleName : admin
 ```
 
-The IDSpace will verify the self-signature to make sure you own your public key and the signature is Ok.
+### New admin request
 
-Also a challenge will be done to the DID of the IDSpace to verify other's side keys. key signature verification is done in both sides.
+If you want to add an additional identity as admin of an IDspace you can use `member-of` and `member-of-confirm`.
+
+```bash
+lorena# member-of
+roomID: <IDspace roomID>
+extra: <blank>
+roleName : admin
+```
+
+The IDspace log will show the secret code needed to confirm the admin request. Call `member-of-confirm` with that secret code.
 
 ```bash
 lorena# member-of-confirm
-roomID: <IDSpace roomID>
+roomID: <IDspace roomID>
 secretCode: <secretCode>
 ```
 
-If you use the secretCode generated for the first time. You will get admin role (roleName is ignored) and that code won't ever be available.
+## Viewing roles
+
+```bash
+lorena# member-list
+roomID: <IDspace roomID>
+```
+
+You can see your identity listed with the `admin` role.
