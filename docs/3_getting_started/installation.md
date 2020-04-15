@@ -133,7 +133,7 @@ Step by Step:
 1. Create a new Wallet (where you keep your info)
 2. Create a Lorena instance and link it to your wallet
 3. First time
-  - use the connstring and the pin to open a channel with your idspace
+  - use the connstring and the pin to open a channel with your IDspace
   - Connect and do the handshake
   - Lock (save) your new wallet
 4. Not the first time : just connect

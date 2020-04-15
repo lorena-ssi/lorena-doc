@@ -6,7 +6,7 @@
 
 
 
-#### Codebases and Dependencies 
+#### Codebases and Dependencies
 
 ![](..\images\048-venonat.png) : DEV environment
 
@@ -32,7 +32,7 @@ Our [Open source Libraries](https://github.com/lorena-ssi)
 
 - [wallet-lib](https://github.com/lorena-ssi/wallet-lib): Default implementation has simple POSIX filesystem-based storage useful for console applications and tests
 
-  
+
 
 ## Deployed instances
 
