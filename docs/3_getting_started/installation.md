@@ -55,100 +55,23 @@ Neighborhood :El Born
 Save Storage
 ```
 
-**What happened so far** : Your wallet is ready with :
-- A new DID (Not yet stored on the BLockchain)
-- A new Keypair (zenroom keys) for you
-- A new matrix user (for P2P communications)
-- A first self-signed certificate with your own personal information.
+**What happened so far** : Your wallet is ready with a new matrix user for P2P communications.
 
 So now you just set up your first Identity Wallet and you are ready playing with it.
 Try to get information using these commands:
 ```bash
 lorena# help
-actions : [ list of actions ]
-lorena# did
-DID : did:lor:labtest:<DID>
-lorena# pubkey
-Public Key : <public Key>
+[ list of actions ]
 lorena# info
 {
   matrixUser: <matrixUser>,
   matrixPass: <matrixPass>,
-  did: 'did:lor:labtest:<DID>',
-  keyPair: {'did:lor:labtest:<DID>': { keypair: [Object] }},
   blockchainServer: 'wss://labtest.substrate.lorena.tech',
   matrixFederation: 'labtest.matrix.lorena.tech',
   matrixServer: 'https://labtest.matrix.lorena.tech'
 }
 ```
 
-Or even get your signed credential
-```bash
-lorena# credential
-{
-  <Yuur full self-signed Credential>
-}
-```
-
 As you can see you are not connected to the IDSpace. Try to run rooms (your connections). It's empty. Let's connect to our own IDSpace
 
-# Connecting ro the IDSpace
 
-
-
-## 3. Using the SDK
-
-```javascript
-const Lorena = require('@lorena-ssi/lorena-cli').default
-const Wallet = require('@lorena-ssi/wallet-lib').default
-
-// Open your wallet and link it to Lorena.
-const username = 'johnsmith'
-const wallet = new Wallet(username)
-const lorena = new Lorena(wallet, { debug: true, silent: true })
-
-// Try to open the wallet (~/.lorena/wallets/johnsmith/)
-const conf = await lorena.unlock(password)
-if (conf === false) {
-  // No Wallet - First time.
-  // Here you need to specify the connstring and security code you already received
-  await lorena.newClient(connString, pin, username)
-  // Connect
-    await lorena.connect()
-
-    // Do the handshake with the server
-    term.cyan('\nHandshake : get DID')
-    await lorena.handshake(threadId++)
-
-    // Save config.
-    term.cyan('\nSave config & connect...')
-    await lorena.lock(password)
-  } else {
-    await lorena.connect()
-  }
-}
-```
-
-Step by Step:
-1. Create a new Wallet (where you keep your info)
-2. Create a Lorena instance and link it to your wallet
-3. First time
-  - use the connstring and the pin to open a channel with your idspace
-  - Connect and do the handshake
-  - Lock (save) your new wallet
-4. Not the first time : just connect
-
-Your app is now ready to use Lorena!
-```javascript
-```
-## 4. Play with it!
-When the process finishes, you will promtp in Lorena CLI. Try help to see the functions available:
-
-First try to interact with your Wallet:
-```bash
-lorena# help
-lorena# info
-lorena# credentials
-lorena# credentials-member
-```
-You are now interacting with your Wallet!

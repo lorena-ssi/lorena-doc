@@ -12,33 +12,29 @@ First time user (no Wallet). Open a connection with the organization that create
 It's the organizaation who connects to the Blockchain, registers the DID and links it to your public Key.
 
 ```javascript
-let threadId = 0
+// Open Wallet and connect to Lorena
 const wallet = new Wallet(username)
-const lorena = new Lorena(wallet, { debug: true })
+const lorena = new Lorena(wallet, { debug: true, silent: true })
 
-// Add new Client (connstring and pin).
-await lorena.newClient(connString, pin, username)
+// First wallet: Self credentials.
+await lorena.initWallet('labtest')
+const person = new Credential.Person(wallet.info.did)
+person.fullName('John', 'Smith', 'Jr')
+person.email('hjohn@smith.jr')
+await lorena.signCredential(person)
 
-// Connect
-await lorena.connect()
-
-// Do the handshake with the server
-await lorena.handshake(threadId++)
-
-// Save configuration.
-await lorena.lock(password)
+// Save wallet.
+await lorena.signCredential(person)
 ```
-
-The threadId is the unique identifier for all of the threads you open to other peers (see recipes).
 
 If it's not the first time connecting :
 ```javascript
-let threadId = 0
 const wallet = new Wallet(username)
 const lorena = new Lorena(wallet, { debug: true })
-
-// Connect
-await lorena.connect()
+if (await lorena.unlock(password)) {
+  // Connect
+  await lorena.connect()
+}
 ```
 
 # Interacting with Lorena P2P Identity Space.
