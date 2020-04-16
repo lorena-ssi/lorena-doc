@@ -85,3 +85,19 @@ roomID: <IDspace roomID>
 ```
 
 You can see your identity listed with the `admin` role.
+
+## Approving additional members and roles
+
+Other roles can be added to the organization with the same process as the New Admin Request, except instead of looking at the IDspace log, the admin looks at the `member-list` for the secret code, which the admin then transmits to the prospective member out-of-band.
+
+* New member
+  * creates a new session with `./terminal`, with a new username and password
+  * creates a new room using `room-add`
+  * calls `member-of` with the role desired (e.g. `developer`)
+* Admin
+  * calls `member-list` to see information for the new member with status `requested`
+  * gives the `secretCode` to the new member through a secondary medium (messenger, email, phone)
+* New member
+  * calls `member-of-confirm` with the `secretCode` given by the admin
+
+The new member will now have the status `verified`.
