@@ -1,17 +1,17 @@
 # IDSpaces
 
-#IDSpace
+#IDspace
 
-An **IDSpace** is a server for your Identity (personal and/or organization). Allowing you to have just one digital identity controlled by you with the capacity to interoperate with other IDSpaces. It’s your digital unique PO Box.
+An **IDspace** is a server for your Identity (personal and/or organization). Allowing you to have just one digital identity controlled by you with the capacity to interoperate with other IDSpaces. It’s your digital unique PO Box.
 
-## What’s inside an IDSpace.
+## What’s inside an IDspace.
 - Your Wallet, storing your data : Cryptographic Keypairs, Contacts, & Verifiable Credentials
-- P2P Communications with any other IDSpace.
+- P2P Communications with any other IDspace.
 - Any other documents sent in a secure way.
 
 IDSpaces for organizations can issue Credentials, sent through P2P channels to Personal IDSpaces.
 
-An IDSPace is a secure way of storing DIDs, DID Documents, the private keys used to control them, Verifiable Credentials and Verifiable Presentations, and other assets used by an entity. It is similar to a digital wallet (such as Trezor, Ledger, or MyEtherWallet) in that it stores private keys, but it also stores more complex documents which express a Decentralized Identity.
+An IDspace is a secure way of storing DIDs, DID Documents, the private keys used to control them, Verifiable Credentials and Verifiable Presentations, and other assets used by an entity. It is similar to a digital wallet (such as Trezor, Ledger, or MyEtherWallet) in that it stores private keys, but it also stores more complex documents which express a Decentralized Identity.
 
 Also An IDspace provides methods of accessing those documents and providing information about the data stored in those documents without sharing the actual information. This is achieved by using Zero-Knowledge Proofs.
 

@@ -6,11 +6,11 @@ You have to create the url following this:
 
 https://vendrell.app.test.caelumlabs.com/?connstring=_connection string_
 
-Then, put your username and password, and the PIN code. 
+Then, put your username and password, and the PIN code.
 
 | Important |
-| -- | 
-| Remember, folling SSI model, your data is yours and it is stored in your browser. If you want to use your Lorena ID, you have to use always the same browser. User & password are set up to login again to your dashboard, to prevent action from other users. |
+| -- |
+| Remember, following the SSI model, your data is yours and it is stored in your browser. If you want to use your Lorena ID, you have to use always the same browser. User & password are set up to login again to your dashboard, to prevent action from other users. |
 
 
 ##### After login the dashboard

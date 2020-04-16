@@ -2,18 +2,6 @@
 
 Next steps:
 
-From your Riot client send commands to your IDSpace
+From your Riot client send commands to your IDspace
 
-connect to another IDSpace and check the connection
-
-```bash
-caelum-cli>connect did otherorg
-caelum-cli>info did otherorg
-```
-
-Ask for gas (Faucet)
-
-```bash
-caelum-cli>faucet did root
-```
-​
+connect to another IDspace and check the connection

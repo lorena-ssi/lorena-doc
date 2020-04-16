@@ -18,7 +18,7 @@ The main library to work with Credentials is [credentials-lib](https://github.co
 ```
 This is the process so far.
 1. First we create an org object with the DID associated to it.
-2. Then we create a new Keypait with Zenroom (or maybe we can reuse any key previously sotred in your wallet.)
+2. Then we create a new Keypair with Zenroom (or maybe we can reuse any key previously stored in your wallet.)
 3. We can now Sign the credential.
 4. Verify
 
@@ -32,7 +32,7 @@ Json Result
   "credentialSubject":
     {
         "@type": "Organization",
-        "id": "did:lor:lab:1000" 
+        "id": "did:lor:lab:1000"
     },
   "proof": {
     "type": "Curve448-Goldilocks",
@@ -53,7 +53,7 @@ Json Result
     developer.fullName('John','Smith', 'Matrix')
 
     org.member('developer', developer)
-    
+
     // Now you can sign it and send it.
 ```
 
@@ -61,10 +61,10 @@ Json Result
 
 ```javascript
     let action = new credentials.Action("did:lor:lab:1000", 20)
-    
+
     let agent = new credentials.Persona('did:lor:lab:1001')
     action.agent(agent)
 
-    
+
     // Now you can sign it and send it.
 ```

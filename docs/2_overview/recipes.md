@@ -7,7 +7,7 @@ Credential Recipes are the way ID Spaces talk to each other. The process can loo
 5. Bob Sends an email to Alice with an unique random number
 6. Alice sends the number to Bob
 7. Bob Creates the credential and sends it to Alice
-Alice stores the credential on her own Database in the IDSpace
+Alice stores the credential on her own Database in the IDspace
 
 # Recipes
 ## Recipes Lifecycle
@@ -24,4 +24,4 @@ Alice stores the credential on her own Database in the IDSpace
 #### Storage
 #### Search
 ## Lorena SDK
-### Lorena CLI Lib
+## Lorena Terminal

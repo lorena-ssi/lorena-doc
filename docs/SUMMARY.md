@@ -19,7 +19,7 @@
 ## 3. Getting started
 
 * [Installation](3_getting_started/installation.md)
-* [Your first contact using Lorena CLI](3_getting_started/contact-cli.md)
+* [Your first contact using Lorena Terminal](3_getting_started/contact-terminal.md)
 * [Your first contact using Lorena WebApp](3_getting_started/contact-webapp.md)
 * [Create your first Recipe](3_getting_started/create-recipes.md)
 
