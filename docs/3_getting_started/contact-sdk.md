@@ -1,7 +1,7 @@
 # Your first contact using Lorena CLI
 
 Your terminal is ready, and you are admin for your organization.
-Two identities have been created : organiztation and persona (you).
+Two identities have been created : organization and persona (you).
 
 ## Adding more members
 
@@ -16,7 +16,7 @@ lorena# info
 {
     ....
 }
-lorena# -linkmember-of
+lorena# link-member-of
 DID: <OrgDID>
 matrixUser: <OrgMatrix>
 ```
@@ -53,7 +53,7 @@ roomID: <IDSpace roomID>
 secretCode: <secretCode>
 ```
 
-If you use the secretCode generated for the first time. You will get admin role (roleName is ignired) and that code won't ever be available.
+If you use the secretCode generated for the first time. You will get admin role (roleName is ignored) and that code won't ever be available.
 
 Now you are admin.
 

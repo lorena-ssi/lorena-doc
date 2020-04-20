@@ -1,6 +1,6 @@
 # Verifiable Credentials
 
-We use semantic web signed claims to enable anyhing happening in Lorena.
+We use Semantic Web Signed Claims as the foundation for events in Lorena.
 
 The main library to work with Credentials is [credentials-lib](https://github.com/lorena-ssi/credential-lib)
 
@@ -43,7 +43,7 @@ Json Result
 }
 ```
 
-## Set the member of this organizatio0n
+## Set the member of this organization
 
 ```javascript
     let org = new credentials.Organization("did:lor:lab:1000")

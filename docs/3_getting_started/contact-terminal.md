@@ -91,7 +91,7 @@ Other roles can be added to the organization with the same process as the New Ad
 
 * New member
   * creates a new session with `./terminal`, with a new username and password
-  * creates a new room using `link-radd`
+  * creates a new room using `link-add`
   * calls `link-member-of` with the role desired (e.g. `developer`)
 * Admin
   * calls `link-member-list` to see information for the new member with status `requested`

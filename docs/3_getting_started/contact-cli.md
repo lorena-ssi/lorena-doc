@@ -14,8 +14,8 @@ Let's add your first contact. We will connect with the IDSpace we just created f
 lorena# link-add
 DID : <IDSpace DID>
 matrix : @ztbjrel4b1lh:labtest.matrix.lorena.tech
-Successfull
-Contact invitation Accepted from ztbjrel4b1lh:labtest.matrix.lorena.tech 
+Successful
+Contact invitation Accepted from ztbjrel4b1lh:labtest.matrix.lorena.tech
 ```
 
 You added this new link to your list of links (stored encrypted in your wallet). When you quit the terminal it will ask to save all the changes to your Wallet.
@@ -51,7 +51,7 @@ roomID: <IDSpace roomID>
 secretCode: <secretCode>
 ```
 
-If you use the secretCode generated for the first time. You will get admin role (roleName is ignired) and that code won't ever be available.
+If you use the secretCode generated for the first time. You will get admin role (roleName is ignored) and that code won't ever be available.
 
 Now you are admin.
 
