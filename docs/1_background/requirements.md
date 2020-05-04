@@ -13,7 +13,7 @@ Lorena is built over some amazing technologies. Learning about them will help yo
 - Built upon on industry-standard WebAssembly
 - Highly extensible Libp2p networking
 - Rust-based primary implementation for speed and reliability
-- Javascript secondary implementation for ease of develop,emt
+- Javascript secondary implementation for ease of development
 - WebAssembly (Wasm) interpreter, written in Rust
 
 ## Matrix
