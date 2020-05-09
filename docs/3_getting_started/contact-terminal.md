@@ -1,12 +1,14 @@
-# Your first `link` using Lorena Terminal
+# Managing Lorena Terminal
 
-You can start playing a bit, lets check all commands you can try.
+In this tutorial we will show how to manage your wallet. It's assumed that Lorena Terminal has been previously installed. When using Lorena Terminal you can have several wallets, and access them simultanously from different terminals. This might be useful because every wallet is aassociated to only one `network`. Each wallet though, can be connected to several IdSpaces in the same `network` using `link`s. In this tutorial there we will be using one Lorena IdSpace that will be manipulated from a Lorena Wallet. This means that a Lorena IdSpace must be running on a console with access to its logs.
 
-Let's add your first link. We will connect with the IDspace we just created for you.
+You can install Lorena Terminal  with the following commands:
 
-## Create your wallet giving the first `link`
+```bash
+npm install @lorena-ssi/lorena-terminal -g
+```
 
-In order to start lorena's terminal run the following command:
+or 
 
 ```bash
 git clone https://github.com/lorena-ssi/terminal.git
@@ -14,247 +16,71 @@ cd terminal
 ./terminal
 ```
 
-### Create a link
-
-Once the terminal is running it will prompt 
-
-```
-Wallet does not exist. Create a new wallet? y/n 
-```
-
-Lorena terminal will prompt this everytime the username and password are not in the database. This means that a new user es going to be created or a wrong user/password was given. Hit `y` in order to create a new wallet.
-
-The following step is to give the `DID` of the idpspace you want to connect to. In order to make it easier for the user we will add an alias to this connection. The process up to here, would look something like this:
-
-![Start](../images/start_first_time_did.png)
-
-We have given all the information of our first connection. Now let's create your wallet. This step is mandatory and will be automatically prompt by terminal.
-
-Once you add your personal info, insert your password when asked to save all changes in your terminal. The process should look something like this:
-
-![CreateWallet](../images/terminal_create_wallet.png)
-
-As you can see, now that the process has ended, that the name of your first connection appears in the terminal (`lor (yourConnection) #`). When the user has several connections, this can be useful to know in which one the changes are being done. Most of the commands that we will present you will be relative to the link the user is active.
-
-### Basic Commands
-#### `help`
-
- ```bash
- lor(firstConnection)# help
-┌────────┬───────────────────────┐
-│ (index)  │          Values           │
-├────────┼───────────────────────┤
-│    0    │          'help'            │
-│    1    │          'info'            │
-│    2    │          'link'            │
-│    3    │      'link-pubkey'         │
-│    4    │         'links'            │
-│    5    │        'link-add'          │
-│    6    │       'link-ping'          │
-│    7    │    'link-ping-admin'       │
-│    8    │     'link-member-of'       │
-│    9    │ 'link-member-of-confirm'   │
-│   10    │    'link-member-list'      │
-│   11    │   'link-action-issue'      │
-│   12    │   'link-action-update'     │
-│   13    │  'link-credential-add'     │
-│   14    │  'link-credential-get'     │
-│   15    │ 'link-credential-issue'    │
-│   16    │ 'link-credential-issued'   │
-│   17    │  'link-credential-list'    │
-│   18    │       'credential'         │
-│   19    │      'credentials'         │
-│   20    │      'action-issue'        │
-│   21    │          'save'            │
-│   22    │          'exit'            │
-└────────┴───────────────────────┘
- ```
+## Create your wallet giving the first `link`
 
-#### `info`
+After running Lorena Terminal we will be asked if we want to log in or add a wallet. Since is the first time, and we don't have a wallet, we will `Add Wallet`. A username and passwords are needed for the wallet. In this example, the wallet created will have as a username `firstWallet`.
 
-```bash
-lor(firstConnection)# info
-{
-    "matrixUser": "mzrkbxdqedvz",
-    "matrixPass": "ell1QkhPRzVI",
-    "keyPair": {},
-    "person": {
-        "@type": "Person",
-        "id": "",
-        "givenName": "Chuck",
-        "familyName": "Norris",
-        "additionalName": "Boris",
-        "identifier": {
-            "@type": "PropertyValue",
-            "propertyID": "Documento Nacional de Identidad de España",
-            "value": "12345678K"
-        },
-        "telephone": "987654321",
-        "email": "chuck@norris.boris.com",
-        "location": {
-            "@type": "PostalAddress",
-            "addressLocality": "Oklahoma",
-            "postalCode": "73008",
-            "neighborhood": "Mine"
-        }
-    },
-    "type": "substrate",
-    "blockchainServer": "wss://labdev.substrate.lorena.tech",
-    "matrixServer": "https://labdev.matrix.lorena.tech"
-}
-```
+After, Terminal will ask information about your first `link`. Lorena Terminal needs a first `link` in order to start. `links` are the way Lorena Terminal communicates with the different IdSpaces in the network. So that value that we need to type is your Lorena IdSpace's DID, it will be something similar to `did:lor:labdev:Y2pob2IyZFJWa2hYZFU0NWVWOXhTa2t5`. In this case we can see that this DID is in the network `labdev`. This is important because all future `link`s done with this wallet must be in the `network` of the first connection.
 
-#### `link`
+As you can see `link`s are quite long and non human readable, this is why the concept of `alias`  exists. Everytime we want to make reference to a spicific `link`, it will be done through `alias`es. This is why the following value Lorena Terminal needs is an `alias` to make reference to the `link` created. As an example, we will call our first `link` as `firstLink`.
 
-Selects active `link`/conenction. A menu will be prompt with all your connections for you to choose which want you want to be active. A value of `None`  can be also given.
+![](../images/terminal/terminal_firstWallet_DID.png)
 
-![LinkCommand](../images/terminal_link_command_output.png)
+Now, the first `link` is done so we will continue creating our wallet. To do so, Fill with your personal information all the prompt information, and confirm the changes inserting your password.
 
-#### `link-pubkey`
+![](../images/terminal/terminal_firstWallet_personalInfo.png)
 
-TODO
+Congratulations! You have created your first Lorena Wallet and the first `link`. Notice that the name of your first `link` appears between parenthesis `lor(firstLink)#` in this example). This is due to the fact that Lorena is designed to interact with IdSpaces or other Lorena nodes. So the workflow will allways start by activating the `link` you want to operate with, execute the commands, close the link, and save the changes if needed. Through this tutorial we will be allways using the `link` with `alias` `firstLink`.
 
-#### `links`
 
-```bash
-lor(firstConnection)# links
-[
-    {
-        "did": false,
-        "linkDid": "did:lor:labdev:VmxSSGFtVkljbUUzTjB4UFZrWTVkRUoz",
-        "roomId": "!dBPScmhtEMHdAvUSTo:labdev.matrix.lorena.tech",
-        "roomName": "TnBaQ3hFV0wy",
-        "keyPair": false,
-        "matrixUser": "@odnrnflrtxvf:labdev.matrix.lorena.tech",
-        "status": "connected",
-        "alias": "firstConnection"
-    }
-]
+## link-member-of and link-member-of-confirm for admin and individual
 
+### Claiming Admin role
 
-```
+Now we are going ask to be member of our Lorena IdSpace.
 
-#### `link-add`
+First step is to activate the link of your IdSpace, in our case is `firstLink`, using command `link`. Once you have your link activated we will use command `link-member-of` to ask our IdSpace to have a role of `admin`.
 
-TODO
+![](../images/terminal/terminal_linkMemberOf_ADMIN.png)
 
-#### `link-ping`
+Now we have to send the admin secret code to our IdSpace. This code is shown when running the IdSpace for the first time and it might look something like this:
 
-TODO
+![](../images/terminal/idspaceLaunch_adminCode.png)
 
-#### `link-ping-admin`
+Once we know this code we can use command `link-member-of-confirm` and insert the secret code when is asked for. If everything goes as expected a confirmation message should be shown.
 
-TODO
+![](../images/terminal/terminal_kinkMemberOfConfirm_ADMIN.png)
 
-#### `link-member-of`
+Now you can use command `link-member-list` to see all the information about all your memberships. For now, we will only have one connection with our IdSpace with `roleName` `admin`. Note that this will show the memberships of the connection you are linked to.
 
-![LinkMemberOf](../images/terminal_linkMemberOf_command_output.png)
+![](../images/terminal/terminal_linkMemberList.png)
 
-#### `link-member-of-confirm`
+### Claiming other roles
 
-TODO
+In order to claim other roles the process is similar but asking for another rolename that the IdSpace supports and handing a secret code that will be given by the IdSpaec when petition is received. In this example we are going to use the rolename `volunteer`.
 
-#### `link-member-list`
+1. The first step is to run the `link-member-of` command, and write `volunteer` as the rolename.
 
-TODO
+2. Get secret code from IdSpace. Should look something like this (IdSpace terminal):
+![](../images/terminal/terminal_secretCode_VOLUNTEER.png)
 
-#### `link-action-issue`
+3. Use command `link-member-of-confirm` and the secret code to confirm the role to your Wallet.
+   
+Now we can confirm we have two connections created using the command `link-member-list`. The first connection coresponds to our admin membership and the other is the membership we just made with `volunteer` as a rolename. This second connection has a status of `requested` instead of `accepted` linke the `admin` membership. This is because the admin role is automatically accepted and other roles must be accepted by the `admin`.
 
-TODO
-
-#### `link-action-update`
-
-TODO
-
-#### `link-credential-add`
-
-TODO
-
-#### `link-credential-get`
-
-TODO
-
-#### `link-credential-issue`
-
-TODO
-
-#### `link-credential-issued`
-
-TODO
-
-#### `link-credential-list`
-
-TODO
-
-#### `credential`
-
-TODO
-
-#### `credentials`
-
-TODO
-
-#### `action-issue`
-
-TODO
-
-#### `save`
-
-TODO
-
-#### `exit`
-
-TODO
-
-#### `ctrl + C`
-
-TODO
-
-
-## Claiming Admin role
-
-In the IDspace a challenge will be done to the DID of the IDspace to verify other's side keys. key signature verification is done in both sides.
-
-There are two ways to claim a role of admin in an organization:
-
-### IDspace init secret code
-
-If you use the `secretCode` generated when the IDspace is created (`./IDspace init`). This is useful only once: that code won't be usable again.
-
-![LinkMemberOf](../images/terminal_linkMemberOf_command_output.png)
-
-![LinkMemberOf](../images/terminal_linkMemberOfConfirm_command_output.png)
-
-### New admin request
-
-If you want to add an additional identity as admin of an IDspace you can use `link-member-of` and `link-member-of-confirm`.
-
-![LinkMemberOf](../images/terminal_linkMemberOf_command_output.png)
+Since we have an `admin` role for our IdSpace we can accept ourselves as a `volunteer` member.
 
 The IDspace log will show the secret code needed to confirm the admin request, also if you are already an admin, you can call `link-member-list` to see the requests and its associated codes. Call now `link-member-of-confirm` with that secret code.
 
-![LinkMemberOf](../images/terminal_linkMemberOfConfirm_command_output.png)
 
-## Viewing roles
+## Create credential as admin from terminal link-credential-add
 
-```bash
-lorena(firstConnection)# link-member-list
-```
+## Issue credential as admin for individual in terminal link-credential-issue
 
-You can see your identity listed with the `admin` role.
+## See credential issued in terminal link-credential-issued
 
-## Approving additional members and roles
+## List of credentials link-credential-list
 
-Other roles can be added to the organization with the same process as the New Admin Request, except instead of looking at the IDspace log, the admin looks at the `link-member-list` for the secret code, which the admin then transmits to the prospective member out-of-band.
+## Get credential link-credential-get
 
-* New member
-  * creates a new session with `./terminal`, with a new username and password
-  * creates a new room using `link-add`
-  * calls `link-member-of` with the role desired (e.g. `developer`)
-* Admin
-  * calls `link-member-list` to see information for the new member with status `requested`
-  * gives the `secretCode` to the new member through a secondary medium (messenger, email, phone)
-* New member
-  * calls `link-member-of-confirm` with the `secretCode` given by the admin
-
-The new member will now have the status `verified`.
+## Verify credential in https://verify.lorena.tech
