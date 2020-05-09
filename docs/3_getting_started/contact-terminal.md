@@ -65,8 +65,12 @@ In order to claim other roles the process is similar but asking for another role
 ![](../images/terminal/terminal_secretCode_VOLUNTEER.png)
 
 3. Use command `link-member-of-confirm` and the secret code to confirm the role to your Wallet.
-   
+
+![](../images/terminal/terminal_addMember_VOLUNTEER.png)
+
 Now we can confirm we have two connections created using the command `link-member-list`. The first connection coresponds to our admin membership and the other is the membership we just made with `volunteer` as a rolename. This second connection has a status of `requested` instead of `accepted` linke the `admin` membership. This is because the admin role is automatically accepted and other roles must be accepted by the `admin`.
+
+![](../images/terminal/terminal_MemberLists_ADMIN_VOLUNTEER.png)
 
 Since we have an `admin` role for our IdSpace we can accept ourselves as a `volunteer` member.
 
