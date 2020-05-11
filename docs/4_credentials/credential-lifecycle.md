@@ -1,7 +1,7 @@
 # Credential Lifecycle
 A credential is a set of one or more claims made by the same entity. Credentials might also include an identifier and metadata to describe properties of the credential, such as the issuer, the expiry date and time, a representative image, a public key to use for verification purposes, the revocation mechanism, and so on. The metadata might be signed by the issuer. A verifiable credential is a set of tamper-evident claims and metadata that cryptographically prove who issued it.
 
-Examples of verifiable credentials include digital employee identification cards, digital birth certificates, and digital educational certificates. 
+Examples of verifiable credentials include digital employee identification cards, digital birth certificates, and digital educational certificates.
 
 ### Lorena Credentials
 
@@ -68,19 +68,19 @@ We have defined three type of credentials:
 
 ## Credentials types
 
-Software systems that process the kinds of objects specified in this document use type information to determine whether or not a provided verifiable credential or verifiable presentation is appropriate. This specification defines a type property for the expression of type information. 
+Software systems that process the kinds of objects specified in this document use type information to determine whether or not a provided verifiable credential or verifiable presentation is appropriate. This specification defines a type property for the expression of type information.
 
 ### Standards W3C
 | Object | Type |
-| -- | -- | 
+| -- | -- |
 | Verifiable credential object (a subclass of a credential object)  | VerifiableCredential and, optionally, a more specific verifiable credential type. For example, ```"type": ["VerifiableCredential", "UniversityDegreeCredential"] ```|
-| Credential object  | VerifiableCredential and, optionally, a more specific verifiable credential type. For example, ```"type": ["VerifiableCredential", "UniversityDegreeCredential"]``` | 
-| Verifiable presentation object (a subclass of a presentation object)  | VerifiablePresentation and, optionally, a more specific verifiable presentation type. For example, ```"type": ["VerifiablePresentation", "CredentialManagerPresentation"]``` | 
-| Presentation object  | VerifiablePresentation and, optionally, a more specific verifiable presentation type. For example, ```"type": ["VerifiablePresentation", "CredentialManagerPresentation"] ```| 
-| Proof object  | A valid proof type. For example, ```"type": "RsaSignature2018"``` | 
-| credentialStatus object  | A valid credential status type. For example, ```"type": "CredentialStatusList2017"``` | 
-| termsOfUse object  | A valid terms of use type. For example, ```"type": "OdrlPolicy2017") ```| 
-| evidence object  | A valid evidence type. For example, ```"type": "DocumentVerification2018"``` | 
+| Credential object  | VerifiableCredential and, optionally, a more specific verifiable credential type. For example, ```"type": ["VerifiableCredential", "UniversityDegreeCredential"]``` |
+| Verifiable presentation object (a subclass of a presentation object)  | VerifiablePresentation and, optionally, a more specific verifiable presentation type. For example, ```"type": ["VerifiablePresentation", "CredentialManagerPresentation"]``` |
+| Presentation object  | VerifiablePresentation and, optionally, a more specific verifiable presentation type. For example, ```"type": ["VerifiablePresentation", "CredentialManagerPresentation"] ```|
+| Proof object  | A valid proof type. For example, ```"type": "RsaSignature2018"``` |
+| credentialStatus object  | A valid credential status type. For example, ```"type": "CredentialStatusList2017"``` |
+| termsOfUse object  | A valid terms of use type. For example, ```"type": "OdrlPolicy2017") ```|
+| evidence object  | A valid evidence type. For example, ```"type": "DocumentVerification2018"``` |
 
 ### Zenroom Proofs
 For instance a proof can be print in JSON format and looks a bit list this:
@@ -113,19 +113,3 @@ Anyone can verify proofs using as input:
 
 The flow described above is pretty simple, but the steps to setup the credential are a bit more complex:
 ![Zenroom Proofs](../../images/zenroom-proofs.png)
-
-
-
-
-<!-- 
-## Issue
-
-## Create
-
-## Share
-
-## Check
-
-## Revoke
-
--->

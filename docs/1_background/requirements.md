@@ -11,7 +11,7 @@ Lorena is built over some amazing technologies. Learning about them will help yo
 [Substrate](https://substrate.dev/docs/en/tutorials/start-a-private-network/) builds upon the achievements from the major blockchain protocols, and uses the lessons learned to give developers the latest technology to build flexible blockchains.
 
 - Built upon on industry-standard WebAssembly
-- Highly extensible Libp2p networking
+- Highly extensible [libp2p](https://libp2p.io/) networking
 - Rust-based primary implementation for speed and reliability
 - Javascript secondary implementation for ease of development
 - WebAssembly (Wasm) interpreter, written in Rust
