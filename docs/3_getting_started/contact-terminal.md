@@ -1,6 +1,6 @@
 # Managing Lorena Terminal
 
-In this tutorial we will show how to manage your wallet. It's assumed that Lorena Terminal has been previously installed. When using Lorena Terminal you can have several wallets, and access them simultanously from different terminals. This might be useful because every wallet is aassociated to only one `network`. Each wallet though, can be connected to several IdSpaces in the same `network` using `link`s. In this tutorial there we will be using one Lorena IdSpace that will be manipulated from a Lorena Wallet. This means that a Lorena IdSpace must be running on a console with access to its logs.
+In this tutorial we will show how to manage your wallet. It's assumed that Lorena Terminal has been previously installed. When using Lorena Terminal you can have several wallets, and access them simultaneously from different terminals. This might be useful because every wallet is associated to only one `network`. Each wallet though, can be connected to several IdSpaces in the same `network` using `link`s. In this tutorial there we will be using one Lorena IdSpace that will be manipulated from a Lorena Wallet. This means that a Lorena IdSpace must be running on a console with access to its logs.
 
 You can install Lorena Terminal  with the following commands:
 
@@ -8,7 +8,7 @@ You can install Lorena Terminal  with the following commands:
 npm install @lorena-ssi/lorena-terminal -g
 ```
 
-or 
+or
 
 ```bash
 git clone https://github.com/lorena-ssi/terminal.git
@@ -22,7 +22,7 @@ After running Lorena Terminal we will be asked if we want to log in or add a wal
 
 After, Terminal will ask information about your first `link`. Lorena Terminal needs a first `link` in order to start. `links` are the way Lorena Terminal communicates with the different IdSpaces in the network. So that value that we need to type is your Lorena IdSpace's DID, it will be something similar to `did:lor:labdev:Y2pob2IyZFJWa2hYZFU0NWVWOXhTa2t5`. In this case we can see that this DID is in the network `labdev`. This is important because all future `link`s done with this wallet must be in the `network` of the first connection.
 
-As you can see `link`s are quite long and non human readable, this is why the concept of `alias`  exists. Everytime we want to make reference to a spicific `link`, it will be done through `alias`es. This is why the following value Lorena Terminal needs is an `alias` to make reference to the `link` created. As an example, we will call our first `link` as `firstLink`.
+As you can see `link`s are quite long and non human readable, this is why the concept of `alias`  exists. Every time we want to make reference to a specific `link`, it will be done through `alias`es. This is why the following value Lorena Terminal needs is an `alias` to make reference to the `link` created. As an example, we will call our first `link` as `firstLink`.
 
 ![](../images/terminal/terminal_firstWallet_DID.png)
 
@@ -30,7 +30,7 @@ Now, the first `link` is done so we will continue creating our wallet. To do so,
 
 ![](../images/terminal/terminal_firstWallet_personalInfo.png)
 
-Congratulations! You have created your first Lorena Wallet and the first `link`. Notice that the name of your first `link` appears between parenthesis `lor(firstLink)#` in this example). This is due to the fact that Lorena is designed to interact with IdSpaces or other Lorena nodes. So the workflow will allways start by activating the `link` you want to operate with, execute the commands, close the link, and save the changes if needed. Through this tutorial we will be allways using the `link` with `alias` `firstLink`.
+Congratulations! You have created your first Lorena Wallet and the first `link`. Notice that the name of your first `link` appears between parenthesis `lor(firstLink)#` in this example). This is due to the fact that Lorena is designed to interact with IdSpaces or other Lorena nodes. So the workflow will always start by activating the `link` you want to operate with, execute the commands, close the link, and save the changes if needed. Through this tutorial we will be always using the `link` with `alias` `firstLink`.
 
 
 ## link-member-of and link-member-of-confirm for admin and individual
@@ -57,9 +57,9 @@ Now you can use command `link-member-list` to see all the information about all 
 
 ### Claiming other roles
 
-In order to claim other roles the process is similar but asking for another rolename that the IdSpace supports and handing a secret code that will be given by the IdSpaec when petition is received. In this example we are going to use the rolename `volunteer`.
+In order to claim other roles the process is similar but asking for another `roleName` that the IDspace supports and handing a secret code that will be given by the IDspace when petition is received. In this example we are going to use the `roleName` `volunteer`.
 
-1. The first step is to run the `link-member-of` command, and write `volunteer` as the rolename.
+1. The first step is to run the `link-member-of` command, and write `volunteer` as the `roleName`.
 
 2. Get secret code from IdSpace. Should look something like this (IdSpace terminal):
 ![](../images/terminal/terminal_secretCode_VOLUNTEER.png)
@@ -68,7 +68,7 @@ In order to claim other roles the process is similar but asking for another role
 
 ![](../images/terminal/terminal_addMember_VOLUNTEER.png)
 
-Now we can confirm we have two connections created using the command `link-member-list`. The first connection coresponds to our admin membership and the other is the membership we just made with `volunteer` as a rolename. This second connection has a status of `requested` instead of `accepted` linke the `admin` membership. This is because the admin role is automatically accepted and other roles must be accepted by the `admin`.
+Now we can confirm we have two connections created using the command `link-member-list`. The first connection corresponds to our admin membership and the other is the membership we just made with `volunteer` as a `roleName`. This second connection has a status of `requested` instead of `accepted` link the `admin` membership. This is because the admin role is automatically accepted and other roles must be accepted by the `admin`.
 
 ![](../images/terminal/terminal_MemberLists_ADMIN_VOLUNTEER.png)
 
