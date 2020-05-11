@@ -76,6 +76,14 @@ Since we have an `admin` role for our IdSpace we can accept ourselves as a `volu
 
 The IDspace log will show the secret code needed to confirm the admin request, also if you are already an admin, you can call `link-member-list` to see the requests and its associated codes. Call now `link-member-of-confirm` with that secret code.
 
+## Export/import your wallet
+
+When logged in your terminal, you can use `export` command to create a json file in the desired path. After exporting it (the default path is the current path where terminal is executed), you can use it when start a new session with terminal:
+
+```shell
+./terminal username_wallet.json
+```
+(Remember to change the path with the correct path of your exported wallet json file)
 
 ## Create credential as admin from terminal link-credential-add
 
