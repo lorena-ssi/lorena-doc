@@ -125,4 +125,10 @@ You might want to select a particular credential from who you know the id, let's
 
 ![](../images/terminal/terminal_linkCredentialGet1_ADMIN.png)
 
+## Verify your credential with `link-credential-verify` command
+
+To verify your credentials you can use `link-credential-verify`. Remember that th eexpected json is obtained from `link-credential-get` passing the correct `id`.
+
 ## Verify credential in https://verify.lorena.tech
+
+You can also check or verify your verifiable credential copying the json prompted by `link-credential-verify` command, and pasting in the following url [https://verify.lorena.tech](https://verify.lorena.tech).
