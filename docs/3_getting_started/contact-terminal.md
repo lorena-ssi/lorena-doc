@@ -85,14 +85,58 @@ When logged in your terminal, you can use `export` command to create a json file
 ```
 (Remember to change the path with the correct path of your exported wallet json file)
 
-## Create credential as admin from terminal link-credential-add
+## Create credential **as admin** from terminal link-credential-add
 
-## Issue credential as admin for individual in terminal link-credential-issue
+As admin you can create credentials that will be later be issued to different roles.
+To do so, enter in Lorena Terminal `link-credential-add`.
+
+You will be prompted with X questions:
+
+· `title`: 
+· `myDescription`: 
+· `url`: 
+· `requirements`:
+
+If everything works correctly a json similar to this will be prompt:
+
+```json
+{
+  success: true,
+  id: 2,
+  did: 'did:lor:labdev:bafyreigbgef6rh7z4en4qx32ef2mirvyshskud5pbhmwlox67tenhkdndu'
+}
+```
+![](../images/terminal/terminal_linkCredentialAdd.png)
+
+## Issue credential as **as admin** for individual in terminal link-credential-issue
+
+Now that the credential is added to the admin wallet, we can issue a credential using command `link-credential-issue`.
+To do so, we need the `id` property of the json prompted in the previous step (in this example cause `id: 2`).
+
+![](../images/terminal/.png)
 
 ## See credential issued in terminal link-credential-issued
 
-## List of credentials link-credential-list
+In order to check the state of an issued credential, you can use the command `link-credential-issued`. To do so, the credential `id` will be needed
 
-## Get credential link-credential-get
+![](../images/terminal/terminal_linkCredentialIssued2_ADMIN.png)
+
+## List of credentials `link-credential-list`
+
+You can check all your credentials added with command `link-credential-list`. The output should look something like this.
+
+![](../images/terminal/terminal_linkCredentialList_ADMIN.png)
+
+## Get credential `link-credential-get`
+
+You might want to select a particular credential from who you know the id, let's say `2` (following the example above). Then we can make usage of `link-credential-get` command, where you will be asked to insert your `credentalId`.
+
+![](../images/terminal/terminal_linkCredentialGet1_ADMIN.png)
+
+## Verify your credential with `link-credential-verify` command
+
+To verify your credentials you can use `link-credential-verify`. Remember that th eexpected json is obtained from `link-credential-get` passing the correct `id`.
 
 ## Verify credential in https://verify.lorena.tech
+
+You can also check or verify your verifiable credential copying the json prompted by `link-credential-verify` command, and pasting in the following url [https://verify.lorena.tech](https://verify.lorena.tech).
