@@ -18,10 +18,10 @@
 
 ## 3. Getting started
 
-* [Installation](3_getting_started/installation.md)
-* [Your first contact using Lorena Terminal](3_getting_started/contact-terminal.md)
-* [Your first contact using Lorena WebApp](3_getting_started/contact-webapp.md)
-* [Create your first Recipe](3_getting_started/create-recipes.md)
+<!--* [Installation](3_getting_started/installation.md) -->
+* [Using Lorena with "Terminal" CLI](3_getting_started/contact-terminal.md)
+<!--* [Using Lorena via WebApp](3_getting_started/contact-webapp.md)-->
+<!--* [Create your first Recipe](3_getting_started/create-recipes.md)-->
 
 ## 4. VERIFIABLE CREDENTIALS
 * [Introduction to Credentials](4_credentials/intro.md)
