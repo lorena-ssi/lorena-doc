@@ -8,19 +8,19 @@ In this tutorial there we will be using one Lorena IDSpace that will be manipula
 
 Go to the url from a mobile browser and click on `REGISTER` button to start the process. 
 
-![](../images/tuto2/1.png)
+<img src="../images/tuto2/1.png" width="340" />
 
 Fill your `username` and `pin` number, this one is a code to lock/unlock your wallet data of minimum 4 chars.
 
-![](../images/tuto2/2.png)
+<img src="../images/tuto2/2.png" width="340" />
 
 Now you have set the wallet name and code, and next step is to fill Personal data information:
 
-![](../images/tuto2/3.png)
+<img src="../images/tuto2/3.png" width="340" />
 
 Finally, accept legal and privacy terms to finish your wallet registration. Now you have connected with the IDSpace and you are waiting for the `secret code`. That code is in charge of the IDSpace admin. Admin has the control of the users that can add or not others. So let's go to see admin dashboard ;)
 
-![](../images/tuto2/4.png)
+<img src="../images/tuto2/4.png" width="340" />
 
 Remember to keep the browser opened!
 
@@ -54,7 +54,7 @@ Now, introduce the secret code `16458795` for the `Diego Nine` user to the mobil
 
 ![](../images/tuto2/7.png)
 
-![](../images/tuto2/8.png)
+<img src="../images/tuto2/8.png" width="340" />
 
 Congratulations! You have created your first Lorena Wallet linking it with the IDSpace.
 
@@ -66,7 +66,7 @@ If you want to connect and know info about any user, you just have to share/scan
 
 Now, with you mobile user webapp wallet, scan it:
 
-![](../images/tuto2/11.png)
+<img src="../images/tuto2/11.png" width="340" />
 
 ![](../images/tuto2/12.png)
 
@@ -110,7 +110,7 @@ From the Admin Webapp Wallet, we can change user roles just clicking on here:
 
 Let's check our user wallet from the smartphone:
 
-![](../images/tuto2/21.png)
+<img src="../images/tuto2/21.png" width="340" />
 
 Here we go! Now I'm admin too from my mobile wallet :)
 
