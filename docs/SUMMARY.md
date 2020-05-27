@@ -24,7 +24,12 @@
     * [Let's play as Admin!](3_getting_started/contact-terminal.md#lets-play-as-admin)
     * [Who said credential is hard?](3_getting_started/contact-terminal.md#who-said-credential-is-hard)
     * [Updating user roles](3_getting_started/contact-terminal.md#updating-user-roles)
-
+* [Manage Lorena with Webapp](3_getting_started/contact-webapp.md)
+    * [Create your own Lorena Wallet](3_getting_started/contact-webapp.md#create-your-lorena-mobile-wallet)
+    * [Let's play as Admin!](3_getting_started/contact-webapp.md#lets-play-as-admin)
+    * [Show me the QR!](3_getting_started/contact-webapp.md#show-me-the-qr)
+    * [Who said credential is hard?](3_getting_started/contact-webapp.md#who-said-credential-is-hard)
+    * [Updating user roles](3_getting_started/contact-webapp.md#updating-user-roles)
 
 <!--* [Using Lorena via WebApp](3_getting_started/contact-webapp.md)-->
 <!--* [Create your first Recipe](3_getting_started/create-recipes.md)-->
