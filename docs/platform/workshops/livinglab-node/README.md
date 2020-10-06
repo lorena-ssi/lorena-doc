@@ -147,7 +147,7 @@ Service:
 | Substrate:SpecFile | `./specfiles/livinglab-testnet-specfileRaw.json` | The Substrate SpecFile with the specifications of the chain specified above |
 | Substrate:Peers:Bootnodes | `/ip4/35.241.221.239/tcp/30333/p2p/12D3KooWK9hPFDuGdTw9KMpVdpHJZS79EzBjwAQFeAE2o3ZPQHHt` | The Livinglab bootnode where the node will connect to discover other network nodes. This one is provided by CaelumLabs|
 | StatefulSet:Image:Repository | `eu.gcr.io/caelumlabs-hub01/substrate-apps/substrate-v2-livinglab` | The Docker Registry URI and Docker Image Name that provides the Livinglab Docker image to deploy. This one is managed and maintained by CaelumLabs |
-| StatefulSet:Image:Tag | `test_latest` | The Docker image version to deploy |
+| StatefulSet:Image:Tag | `v2.0.0-rc6-v1.0.6` | The Docker image version to deploy |
 | StatefulSet:Resources:Limits | the values you want,minimal are setted by default | The maximum cpu and memory resources that the container will be consume into Kubernetes |
 | StatefulSet:Resources:Requests | the values you want,minimal are setted by default | The minimal cpu and memory resources needed by the container to run into Kubernetes |
 | StatefulSet:VolumeClaimTemplates:StorageClassName | your Kubernetes Storage Class Name | The Storage Provider Class for your Kubernetes cluster |
