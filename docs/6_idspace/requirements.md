@@ -1,4 +1,4 @@
-This are the requirements to deploy an Idspace
+These are the Idspace software and hardware requirements
 
 # Software Requirements
 
