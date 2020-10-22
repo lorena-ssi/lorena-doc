@@ -13,6 +13,6 @@ This are the requirements to deploy an Idspace
 
 These are the minimal hardware requirements to deploy an Idspace node
 
-| CPU | RAM | DISK |
-|-|-|-|
-| 1 | 64 MB | 4 GB |
+| CPU    | RAM    | DISK   |
+| :----: | :----: | :----: |
+| 1      | 64 MB  | 4 GB   |
