@@ -49,3 +49,8 @@
 
 * Using [Substrate](5_blockchain/substrate.md)
 * Add another Blockchain [Blockchain](5_blockchain/add.md)
+
+## 6. Idspace
+
+* [Requirements](6_idspace/requirements.md)
+* [Installation](6_idspace/installation.md)
